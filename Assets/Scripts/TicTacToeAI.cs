@@ -26,26 +26,14 @@ public class TicTacToeAI : MonoBehaviour
 
 		public void StepAI ()
 		{
-				FreezeInput (true);
+				SendMessage("FreezeCells", true);
 				Invoke ("AILogic", 1);
 		}
 	
-		void FreezeInput (bool yes)
-		{
-				foreach (Cell cell in gameData.cells.Values) {
-						if (yes) {
-								cell.Freeze ();
-						} else {
-								cell.UnFreeze ();
-						}
-				}
-		}
-
 		void AILogic ()
 		{
-				FreezeInput (false);
-				
-				
+				SendMessage("FreezeCells", false);
+						
 				aiChoosed = false;
 				foreach (Cell cell in gameData.freeCells.Values) {
 						if (!aiChoosed) {

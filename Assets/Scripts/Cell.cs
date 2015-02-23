@@ -62,7 +62,7 @@ public class Cell : MonoBehaviour
 				AnimateText ();
 		}
 
-		void cellClicked ()
+		public void cellClicked ()
 		{
 				ClikedBase ();
 				ticTacToe.SendMessage ("playerTurned", this);

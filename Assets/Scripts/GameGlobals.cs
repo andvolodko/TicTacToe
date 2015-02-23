@@ -20,6 +20,12 @@ class GameGlobals
 		public const string MSG_PLAYER_ONE_WON = "Player one WON!";
 		public const string MSG_PLAYER_TWO_WON = "Player two WON!";
 		public const string MSG_TIE = "Opps. TIE!";
+		public const string MSG_WAITING_PLAYER = "Waiting for opponent";
+		public const string MSG_PLAYER_EXIT = "Opponent gone";
+		public const string MSG_YOUR_TURN = "Your turn";
+		public const string MSG_OPPONENT_TURN = "Opponent turn";
+		public const string MSG_YOU_WON = "You WON!";
+		public const string MSG_YOU_LOSE = "You LOSE!";
 }
 
 

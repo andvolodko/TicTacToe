@@ -17,7 +17,12 @@ public class GameSounds : MonoBehaviour
 		{
 				audio.PlayOneShot (click);
 		}
-	
+
+		void OnlineGame ()
+		{
+				audio.PlayOneShot (click);
+		}
+
 		void NewGame ()
 		{
 				audio.PlayOneShot (click);

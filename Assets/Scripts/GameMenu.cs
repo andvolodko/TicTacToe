@@ -18,7 +18,12 @@ public class GameMenu : MonoBehaviour
 		{
 				switchSelectMenu (false);
 		}
-	
+
+		void OnlineGame ()
+		{
+				switchSelectMenu (false);
+		}
+
 		void NewGame ()
 		{
 				switchSelectMenu (true);

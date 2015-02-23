@@ -15,7 +15,7 @@ public class TicTacToeMain : MonoBehaviour
 		void startGame ()
 		{
 				prepareCells ();
-				prepareAIMode ();
+				if(gameData.modeAI) prepareAIMode ();
 				SendMessage ("GameStarted");
 		}
 
@@ -52,6 +52,7 @@ public class TicTacToeMain : MonoBehaviour
 		{
 				turned (cell);
 				SendMessage ("CalcWin");
+				SendMessage ("PlayerEndTurn");
 				if (gameData.modeAI && !gameData.gameOver)
 						SendMessage ("StepAI");
 		}
@@ -72,16 +73,36 @@ public class TicTacToeMain : MonoBehaviour
 						gameData.oCells.Add (cell.GetKey (), cell);
 		}
 
+		void FreezeCells (bool yes)
+		{
+			foreach (Cell cell in gameData.cells.Values) {
+				if (yes) {
+					cell.Freeze ();
+				} else {
+					cell.UnFreeze ();
+				}
+			}
+		}
+
 		void PlayerVsPlayer ()
 		{
+				gameData.modeOnline = false;
 				gameData.modeAI = false;
 				startGame ();
 		}
 
 		void PlayerVsAI ()
 		{
+				gameData.modeOnline = false;
 				gameData.modeAI = true;
 				startGame ();
+		}
+
+		void OnlineGame ()
+		{
+			gameData.modeOnline = true;
+			gameData.modeAI = false;
+			startGame ();
 		}
 
 		void NewGame ()

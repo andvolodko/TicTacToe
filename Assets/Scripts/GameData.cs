@@ -11,7 +11,9 @@ public class GameData : MonoBehaviour
 		public Dictionary<string, Cell> freeCells;
 		public bool playerOneTurn = true;
 		public bool modeAI = false;
+		public bool modeOnline = false;
 		public bool AIfirst = false;
+		public bool youFirst = false;
 		public bool gameOver = false;
 		public Vector3[] combos;
 
