@@ -10,42 +10,42 @@ public class GameSounds : MonoBehaviour
 
 		void PlayerVsPlayer ()
 		{
-				audio.PlayOneShot (click);
+				GetComponent<AudioSource>().PlayOneShot (click);
 		}
 	
 		void PlayerVsAI ()
 		{
-				audio.PlayOneShot (click);
+				GetComponent<AudioSource>().PlayOneShot (click);
 		}
 
 		void OnlineGame ()
 		{
-				audio.PlayOneShot (click);
+				GetComponent<AudioSource>().PlayOneShot (click);
 		}
 
 		void NewGame ()
 		{
-				audio.PlayOneShot (click);
+				GetComponent<AudioSource>().PlayOneShot (click);
 		}
 
 		void playerTurned ()
 		{
-				audio.PlayOneShot (click);
+				GetComponent<AudioSource>().PlayOneShot (click);
 		}
 
 		void AITurned ()
 		{
-				audio.PlayOneShot (click);
+				GetComponent<AudioSource>().PlayOneShot (click);
 		}
 
 		void XWon ()
 		{
-				audio.PlayOneShot (won);
+				GetComponent<AudioSource>().PlayOneShot (won);
 		}
 
 		void OWon ()
 		{
-				audio.PlayOneShot (won);
+				GetComponent<AudioSource>().PlayOneShot (won);
 		}
 
 }

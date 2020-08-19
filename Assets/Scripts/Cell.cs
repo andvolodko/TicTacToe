@@ -20,7 +20,7 @@ public class Cell : MonoBehaviour
 				gameData = ticTacToe.GetComponent<GameData> ();
 				cellCollider = GetComponentInChildren<MeshCollider> ();
 				caption = GetComponentInChildren<TextMesh> ();
-				caption.renderer.enabled = false;
+				caption.GetComponent<Renderer>().enabled = false;
 		}
 
 		public void SetIndex (Vector3 vec)
@@ -57,7 +57,7 @@ public class Cell : MonoBehaviour
 						type = GameGlobals.CELL_O;
 				}
 				//caption.text = GetCellPosition ().ToString();
-				caption.renderer.enabled = true;
+				caption.GetComponent<Renderer>().enabled = true;
 				Debug.Log ("cell click");
 				AnimateText ();
 		}
@@ -93,7 +93,7 @@ public class Cell : MonoBehaviour
 
 		public void SetWin ()
 		{
-				cellBackround.renderer.material.color = new Color32 (245, 108, 55, 255);
+				cellBackround.GetComponent<Renderer>().material.color = new Color32 (245, 108, 55, 255);
 		}
 
 		public void SetLose ()
